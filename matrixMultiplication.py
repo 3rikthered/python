@@ -11,27 +11,27 @@ matrixB = [[9, 8, 7, 6],
 # multiplies every paired value in the locations
 # then adds the multiplied pairs
 
+# AB
 matrixResultA = [[sum(x*y
                   for x,y in zip(row, column))
                   for column in zip(*matrixB)]
                   for row in matrixA]
 
+# BA
 matrixResultB = [[sum(x*y
                   for x,y in zip(row, column))
                   for column in zip(*matrixA)]
                   for row in matrixB]
 
+# displays the results
 print('')
-
 for value in matrixResultA:
   print(value)
-
 print('')
-
 for value in matrixResultB:
   print(value)
-
 print('')
 
+# tells whether the results are equal
 print ('AB and BA are', 'equal' if (matrixResultA == matrixResultB)
                                 else 'unequal')
