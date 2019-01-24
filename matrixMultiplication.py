@@ -7,7 +7,7 @@ matrixA = [[1, 2],
 matrixB = [[9, 8, 7, 6],
            [5, 4, 3, 2]]
 
-# iterates through each column in matrixB for each row in matrixA,
+# iterates through each column in matrix2 for each row in matrix1,
 # multiplies every paired value in the locations
 # then adds the multiplied pairs
 
