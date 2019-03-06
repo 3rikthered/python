@@ -1,14 +1,11 @@
 from random import randint
 
-def birthdays(people):
-  return[1 + randint(0,365) for i in range(people)]
-
 def probability(people, simulations):
   sharedBirthdaysExist = 0
   
   for i in range(simulations):
-    dates = birthdays(people)
-    sharedBirthdays = set(date for date in dates if dates.count(date) > 1)
+    birthdays = [randint(0, 365) for i in range(people)]
+    sharedBirthdays = set(date for date in birthdays if birthdays.count(date) > 1)
     if len(sharedBirthdays) >= 1:
       sharedBirthdaysExist += 1
 
